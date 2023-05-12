@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/confintr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/confintr/confintr_{{ version }}.tar.gz
-  sha256: 0fb9333cec88780f2c90b2079434f2b5c23b98c7325c3ecf5c98f022f16a7a97
+  sha256: 3f4694a607b888b149e6bc73f711647a33d5066f07ce686e7e022d4fdd0a535c
 
 build:
   merge_build_host: true  # [win]
@@ -39,8 +39,8 @@ test:
 about:
   home: https://github.com/mayer79/confintr
   license: GPL-2.0-or-later
-  summary: "Calculates classic and/or bootstrap confidence intervals for many parameters such as the population mean, variance, interquartile range (IQR), median absolute deviation (MAD), skewness, kurtosis, Cramer's V, odds ratio, R-squared, quantiles (incl. median), proportions, different types of correlation measures,\
-    \ difference in means, quantiles and medians. Many of the classic confidence intervals are described in Smithson, M. (2003, ISBN: 978-0761924999). Bootstrap confidence intervals are calculated with the R package 'boot'. Both one- and two-sided intervals are supported."
+  summary: "Calculates classic and/or bootstrap confidence intervals for many parameters such as the population mean, variance, interquartile range (IQR), median absolute deviation (MAD), skewness, kurtosis, Cramer's V, odds ratio, R-squared, quantiles (incl. median), proportions, different types of correlation measures,
+    difference in means, quantiles and medians. Many of the classic confidence intervals are described in Smithson, M. (2003, ISBN: 978-0761924999). Bootstrap confidence intervals are calculated with the R package 'boot'. Both one- and two-sided intervals are supported."
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
